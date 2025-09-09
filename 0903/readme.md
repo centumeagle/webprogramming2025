@@ -18,7 +18,7 @@
 - 인터넷은 고속도로, 웹은 그 위의 물류 산업으로 비유
 ## **4. 웹 브라우저 & 역사**
 - 주요 브라우저: Chrome, Firefox, Safari, Edge, Opera
-- 연대표: 1990 WorldWideWeb → 1993 Mosaic → 1994 Netscape → 1995 IE → 2008 Chrome → 2015 Edge
+- 연대표: 1990 WorldWideWeb → 1993 Mosaic -> 1994 Netscape -> 1995 IE -> 2008 Chrome -> 2015 Edge
 - 특징 요약: Netscape(대중화), IE(번들 전략), Chrome(지배적)
 ## **5. 웹 사이트 구축**
 - 필수 요소: 웹 서버 SW(Apache, nginx, IIS 등), 정적 자원, DB, 서버 응용프로그램
@@ -43,4 +43,5 @@
 - 표준화: W3C + WHATWG
 - 특징: 구조/표현/행동 분리, 플러그인 불필요, 장치 독립성
 - 주요 기능: 오디오·비디오, 캔버스, SVG, 웹 스토리지, IndexedDB, Geolocation, Web Worker, WebSocket 등
+
 

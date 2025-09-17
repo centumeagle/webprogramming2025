@@ -1,90 +1,116 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>자기소개</title>
-        <meta charset="utf-8">
-        <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="utf-8">
     <title>자기소개</title>
     <style>
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            margin: 5;
+            font-family: "Noto Sans KR", Arial, sans-serif;
+            margin: 0;
             padding: 0;
+            background: #f4f6f8;
         }
 
         h1 {
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 10px;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
         hr {
+            border: none;
             height: 2px;
-            background: #3498db;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 500px;
+            background: white;
+            margin: 30px auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         p {
             line-height: 1.8;
             font-size: 16px;
-            color: #333;
+            color: #444;
         }
 
         meter {
-            width: 200px;
-            height: 20px;
+            width: 220px;
+            height: 18px;
         }
 
         table {
-            margin: 20px auto;
+            width: 100%;
+            margin-top: 15px;
         }
 
         td {
-            padding: 5px;
+            padding: 8px;
+            vertical-align: middle;
         }
 
         input[type="email"], input[type="password"] {
             width: 95%;
-            padding: 8px;
-            border: 1px solid #bbb;
-            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #2575fc;
+            outline: none;
         }
 
         input[type="button"] {
-            background: #3498db;
+            background: #2575fc;
             color: white;
-            padding: 8px 15px;
+            padding: 10px 18px;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
-            transition: 0.3s;
+            font-size: 14px;
+            transition: background 0.3s;
         }
 
         input[type="button"]:hover {
-            background: #2980b9;
+            background: #1a5edb;
         }
     </style>
-    </head>
-    <body>
-        <h1>자기소개</h1>
-        <hr />
+</head>
+<body>
+    <h1>자기소개</h1>
+    <div class="container">
         <p>
-            이름 : 이승민<br />
-            사용 가능한 언어 : C, Java<br />
-            C <meter value="0.4" max="1.0">40%</meter><br />
-            Java <meter value="0.3" max="1.0">30%</meter><br />
+            이름 : 이승민<br>
+            사용 가능한 언어 : C, Java<br>
+            C <meter value="0.4" max="1.0">40%</meter><br>
+            Java <meter value="0.3" max="1.0">30%</meter><br>
         </p>
-        <hr />
+        <hr>
         <form>
             <table>
-                <tr><td>이메일 </td>
-                    <td><input type="email" value="" /></td></tr>
-                <tr><td>패스워드 </td>
-                    <td><input type="password" value="" /></td>
-                    <td><input type="button" value="입력"></tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="email" placeholder="이메일 입력"></td>
+                </tr>
+                <tr>
+                    <td>패스워드</td>
+                    <td><input type="password" placeholder="비밀번호 입력"></td>
+                    <td><input type="button" value="입력"></td>
+                </tr>
             </table>
         </form>
-    </body>
+    </div>
+</body>
 </html>
+

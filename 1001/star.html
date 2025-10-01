@@ -4,59 +4,48 @@
   <meta charset="UTF-8">
   <title>별 패턴 출력</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 40px; }
-    button { margin: 5px; padding: 5px 10px; }
-    .result-box { margin-top: 20px; }
-    .result-box pre { 
-      text-align: left;       /* 텍스트는 왼쪽 정렬 */
-      font-family: monospace; 
-      border: 2px solid #333; 
-      padding: 15px; 
-      background-color: #f9f9f9; 
-      border-radius: 8px;
-      display: inline-block;  /* 내용 크기만큼 박스 */
-      margin: 0 auto;         /* 화면 가운데 배치 */
-    }
+    body { font-family: sans-serif; margin: 40px; }
+    pre { text-align: left; }
   </style>
 </head>
 <body>
   <h2>별 패턴 출력</h2>
-  <hr>
-  <button onclick="left()">왼쪽 정렬</button>
-  <button onclick="right()">오른쪽 정렬</button>
-  <button onclick="pyramid()">피라미드</button>
-
-  <div class="result-box">
-    <pre id="result"></pre>
-  </div>
+  <pre id="result"></pre>
 
   <script>
-    function left() {
-      let out = "";
-      out += "*\n";
-      out += "**\n";
-      out += "***\n";
-      out += "****\n";
-      document.getElementById("result").textContent = out;
+    const rows = 4;
+    let out = "";
+
+    for (let i = 1; i <= rows; i++) {
+      for (let j = 1; j <= i; j++) {
+        out += "*";
+      }
+      out += "\n";
     }
 
-    function right() {
-      let out = "";
-      out += "   *\n";
-      out += "  **\n";
-      out += " ***\n";
-      out += "****\n";
-      document.getElementById("result").textContent = out;
+    out += "\n";
+    for (let i = 1; i <= rows; i++) {
+      for (let j = 1; j <= rows - i; j++) {
+        out += " ";
+      }
+      for (let k = 1; k <= i; k++) {
+        out += "*";
+      }
+      out += "\n";
     }
 
-    function pyramid() {
-      let out = "";
-      out += "   *\n";
-      out += "  ***\n";
-      out += " *****\n";
-      out += "*******\n";
-      document.getElementById("result").textContent = out;
+    out += "\n";
+    for (let i = 1; i <= rows; i++) {
+      for (let j = 1; j <= rows - i; j++) {
+        out += " ";
+      }
+      for (let k = 1; k <= 2 * i - 1; k++) {
+        out += "*";
+      }
+      out += "\n";
     }
+
+    document.getElementById("result").textContent = out;
   </script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= j , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border : 1px;
+        border-collapse: collapse;
+    }
+    td{
+        width: 50px;
+        height: 50px;
+        border: 1px solid blue;
+        padding: 0px;
+    }
+    img {
+        width: 45px;
+        height: 45px;
+    }
+</style>
+<body onload="set()">
+    <script>
+        let select = 0;
+        let img = new Image();
+        img.src = "spongebob.png";
+
+        function set(){
+            let table = document.getElementById("table1");
+            for(let i=0; i<10; i++){
+                let tr = document.createElement("tr");
+
+                for(let j=0; j<10; j++){
+                    let td = document.createElement("td");
+                    td.innerHTML = "<img style = 'display:none'; src=''>";
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+
+            for(let i=0; i<100; i++){
+                document.images[i].onclick = moving;
+            }
+            moving();
+        }
+
+        function moving(){
+            document.images[select].style.display="none";
+            document.images[select].src="";
+            
+            select = Math.floor(Math.random()*100);
+
+            document.images[select].style.display="block";
+            document.images[select].src = img.src;
+        }
+    </script>
+    <table id="table1"></table>
+</body>
+</html>
